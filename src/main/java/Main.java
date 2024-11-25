@@ -10,16 +10,17 @@ public class Main {
         board.board[0][2] = new Bishop(ChessPiece.WHITE);
         board.board[0][3] = new Queen(ChessPiece.WHITE);
         board.board[0][4] = new King(ChessPiece.WHITE);
+        board.board[2][5] = new Bishop(ChessPiece.WHITE);
         board.board[0][5] = new Bishop(ChessPiece.WHITE);
         board.board[0][6] = new Horse(ChessPiece.WHITE);
         board.board[0][7] = new Rook(ChessPiece.WHITE);
         board.board[1][0] = new Pawn(ChessPiece.WHITE);
         board.board[1][1] = new Pawn(ChessPiece.WHITE);
-        board.board[1][2] = new Pawn(ChessPiece.WHITE);
+//        board.board[1][2] = new Pawn(ChessPiece.WHITE);
         board.board[1][3] = new Pawn(ChessPiece.WHITE);
-        board.board[1][4] = new Pawn(ChessPiece.WHITE);
+//        board.board[1][4] = new Pawn(ChessPiece.WHITE);
         board.board[1][5] = new Pawn(ChessPiece.WHITE);
-        board.board[1][6] = new Pawn(ChessPiece.WHITE);
+//        board.board[1][6] = new Pawn(ChessPiece.WHITE);
         board.board[1][7] = new Pawn(ChessPiece.WHITE);
 
         board.board[7][0] = new Rook(ChessPiece.BLACK);

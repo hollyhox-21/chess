@@ -14,10 +14,14 @@ public class Queen extends ChessPiece {
             return false;
         }
 
+        int j = Math.max(column, toColumn) - 1;
         for (int i = Math.min(line, toLine) + 1; i < Math.max(line, toLine); i++) {
-            for (int j = Math.min(column, toColumn) + 1; j < Math.max(column, toColumn); j++) {
+            if (i > Math.min(line, toLine)) {
                 if (chessBoard.board[i][j] != null) {
                     return false;
+                }
+                if (j > Math.min(column, toColumn)) {
+                    j--;
                 }
             }
         }
@@ -28,7 +32,7 @@ public class Queen extends ChessPiece {
                     return false;
                 }
             }
-        } else {
+        } else if (column == toColumn) {
             for (int i = Math.min(line, toLine) + 1; i < Math.max(line, toLine); i++) {
                 if (chessBoard.board[i][column] != null) {
                     return false;
