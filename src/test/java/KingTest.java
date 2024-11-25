@@ -6,7 +6,7 @@ class KingTest {
     @Test
     void canMoveToPosition() {
         King king = new King("white");
-        ChessBoard chessBoard = new ChessBoard();
+        ChessBoard chessBoard = new ChessBoard(ChessPiece.WHITE);
         Assertions.assertTrue(king.canMoveToPosition(chessBoard, 3, 3, 4, 2));
         Assertions.assertTrue(king.canMoveToPosition(chessBoard, 3, 3, 4, 3));
         Assertions.assertTrue(king.canMoveToPosition(chessBoard, 3, 3, 4, 4));
@@ -20,7 +20,7 @@ class KingTest {
     @Test
     void canMoveToPositionFalse() {
         King king = new King("white");
-        ChessBoard chessBoard = new ChessBoard();
+        ChessBoard chessBoard = new ChessBoard(ChessPiece.WHITE);
         Assertions.assertFalse(king.canMoveToPosition(chessBoard, 0, 0, 0, 0));
         Assertions.assertFalse(king.canMoveToPosition(chessBoard, 3, 3, 5, 1));
         Assertions.assertFalse(king.canMoveToPosition(chessBoard, 3, 3, 5, 2));

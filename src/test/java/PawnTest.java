@@ -5,7 +5,7 @@ class PawnTest {
     @Test
     void canMoveToPosition() {
         Pawn pawnWhite = new Pawn(ChessPiece.WHITE);
-        ChessBoard chessBoard = new ChessBoard();
+        ChessBoard chessBoard = new ChessBoard(ChessPiece.WHITE);
         Assertions.assertTrue(pawnWhite.canMoveToPosition(chessBoard, 3, 3, 4, 3));
         Assertions.assertTrue(pawnWhite.canMoveToPosition(chessBoard, 1, 3, 2, 3));
         Assertions.assertTrue(pawnWhite.canMoveToPosition(chessBoard, 1, 3, 3, 3));

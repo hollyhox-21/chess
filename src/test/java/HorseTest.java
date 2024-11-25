@@ -1,14 +1,12 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class HorseTest {
 
     @Test
     void canMoveToPosition() {
         Horse horse = new Horse("white");
-        ChessBoard chessBoard = new ChessBoard();
+        ChessBoard chessBoard = new ChessBoard(ChessPiece.WHITE);
         Assertions.assertTrue(horse.canMoveToPosition(chessBoard, 3, 3, 5, 4));
         Assertions.assertTrue(horse.canMoveToPosition(chessBoard, 3, 3, 1, 4));
         Assertions.assertTrue(horse.canMoveToPosition(chessBoard, 3, 3, 1, 2));
@@ -23,7 +21,7 @@ class HorseTest {
     @Test
     void canMoveToPositionFalse() {
         Horse horse = new Horse("white");
-        ChessBoard chessBoard = new ChessBoard();
+        ChessBoard chessBoard = new ChessBoard(ChessPiece.WHITE);
         Assertions.assertFalse(horse.canMoveToPosition(chessBoard, 0, 0, 0, 0));
         Assertions.assertFalse(horse.canMoveToPosition(chessBoard, 3, 3, 5, 1));
         Assertions.assertFalse(horse.canMoveToPosition(chessBoard, 3, 3, 5, 3));
